@@ -23,8 +23,6 @@ const { activeNav } = Astro.props;
           class="avatar"
           src={iluminAvatar}
           alt="ilumin"
-          width={60}
-          height={60}
         />
       </a>
       <a href="/" class="logo">
@@ -137,6 +135,9 @@ const { activeNav } = Astro.props;
   }
   .top-nav-wrap {
     @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8 gap-2;
+  }
+  .avatar {
+    @apply w-14;
   }
   .logo {
     @apply absolute py-1 text-xl font-semibold sm:static sm:text-2xl flex gap-2 items-center;
