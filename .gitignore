@@ -35,3 +35,5 @@ pnpm-debug.log*
 .pnp.*
 
 .example-content/
+
+node_modules
