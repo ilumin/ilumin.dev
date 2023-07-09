@@ -38,6 +38,8 @@ tags:
   - [ ] รองรับ MDX
   - [ ] รองรับ [Markdown footnotes](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#footnotes)
   - [ ] รองรับ [comment](https://giscus.app/)
+  - [x] รองรับการเขียน diagram ด้วย mermaid
+  - [ ] รองรับการเขียน diagram ด้วย plantuml
 
 ## References
 
