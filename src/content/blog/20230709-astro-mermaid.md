@@ -1,7 +1,7 @@
 ---
-title: Astro Mermaid Plugin
+title: Astro Mermaid support with simple remark plugin
 description: ทำให้ astro ซัพพอร์ต mermaid
-postSlug: astro-mermaid-plugin
+postSlug: astro-mermaid-with-remark-plugin
 draft: false
 pubDatetime: 2023-07-09
 tags: 
@@ -10,6 +10,9 @@ tags:
   - remark
   - mermaid
 ---
+
+> **Note**:  
+> This solution does work on local. But it doesn't work on production.
 
 ## What
 
