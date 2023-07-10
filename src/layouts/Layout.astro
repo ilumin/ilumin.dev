@@ -98,6 +98,7 @@ const socialImageURL = new URL(
           const id = (svg.id = "mermaid-" + Math.round(Math.random() * 100000))
           graph.appendChild(svg)
           const result = await mermaid.render(id, content)
+          console.log('result:', result)
           graph.innerHTML = result.svg
         }
       }
