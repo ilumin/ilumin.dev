@@ -81,9 +81,8 @@ const socialImageURL = new URL(
     <slot />
 
     <script>
-      const graphs = document.getElementsByClassName("mermaid")
-      if (document.getElementsByClassName("mermaid").length > 0) {
-        const { default: mermaid } = await import("mermaid")
+      async function renderDiagrams(graphs) {
+        const {default: mermaid} = await import("mermaid")
         mermaid.initialize({
           startOnLoad: false,
           fontFamily: "var(--sans-font)",
@@ -97,10 +96,15 @@ const socialImageURL = new URL(
           let svg = document.createElement("svg")
           const id = (svg.id = "mermaid-" + Math.round(Math.random() * 100000))
           graph.appendChild(svg)
-          const result = await mermaid.render(id, content)
-          console.log('result:', result)
-          graph.innerHTML = result.svg
+          mermaid.render(id, content).then(result => {
+            graph.innerHTML = result.svg
+          })
         }
+      }
+
+      const graphs = document.getElementsByClassName("mermaid")
+      if (document.getElementsByClassName("mermaid").length > 0) {
+        renderDiagrams(graphs);
       }
     </script>
   </body>
